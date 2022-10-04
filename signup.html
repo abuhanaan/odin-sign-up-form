@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-5">
+            <div>
+                <img src="./odin-lined.png" alt="odinLogo">
+                <h1 class="label">ODIN RESTAURANT</h1>
+            </div>
+            <p class="label">PHOTO BY CRISTOPHE ROLANDO</p>
+          </div>
+          <div class="col-sm-7">
+            <div class="row">
+                <div class="col-12">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                          <h1 class="display-4">Signup Page</h1>
+                          <p class="lead">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get a taste of our <em>famous recipe</em>.</p>
+                        </div>
+                      </div>
+                    <div>
+                        <h1 class="head display-5">Let's do this</h1>
+                        <form action="#" method="post" onsubmit="return passwordConfirmation()">
+                            <div class="row">
+                              <div class="col-md-6 col-mb-3">
+                                <label for="firstName" class="label">First name</label>
+                                <input type="text" name="firstName" class="form-control" id="firstName" placeholder="Jane" required>
+                              </div>
+                              <div class="col-md-6 col-mb-3">
+                                <label for="lastName" class="label">Last name</label>
+                                <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Doe" required>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-mb-3">
+                                  <label for="email" class="label">E-mail</label>
+                                  <input type="email" name="email" class="form-control" id="email" placeholder="dummymail@email.com" required>
+                                </div>
+                                <div class="col-md-6 col-mb-3">
+                                  <label for="phoneNo" class="label">Phone No.</label>
+                                  <input type="tel" name="phoneNo" class="form-control" id="phoneNo" placeholder="Tel No." value="" required>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 col-mb-3">
+                                  <label for="password1" class="label">Password</label>
+                                  <input type="password" name="password1" class="form-control" id="password1" placeholder="enter password" value="" required
+                                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                  title="Password must have minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character">
+                                </div>
+                                <div class="col-md-6 col-mb-3">
+                                  <label for="password2" class="label">Confirm Password</label>
+                                  <input type="password" name="password2" class="form-control" id="password2" placeholder="re-enter password" value="" required>
+                                  <span id="spanconfirmpassword" class="text-danger font-weight-bold"></span>
+                                </div>
+                              </div>
+                              <div>
+                                
+                                <button class="btn btn-primary" type="submit">Create Account</button>
+                              </div>
+                              <div>
+                                <p class="label">Already have an account? <a href="#">Login</a></p>
+                              </div>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function passwordConfirmation() {
+            var p1 = document.getElementById("password1").value;
+            var p2 = document.getElementById("password2").value;
+    
+            if(p1.match(p2)) {
+                document.getElementById("spanconfirmpassword").innerHTML="Password matched";
+            } else {
+                document.getElementById("spanconfirmpassword").innerHTML="No password matched";
+                return false;
+            }
+        }
+    </script>  
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+.col-sm-5 {
+    background-image: url(./christophe-rollando-4sQtntgwHbI-unsplash.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex; 
+}
+
+.col-sm-5 img {
+    width: 5rem;
+    padding: 10px;
+  }
+
+.col-sm-5 div {
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.527); */
+    line-height: 2rem;
+    padding: 0px 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.col-sm-5 p {
+    font-size: .8rem;
+    color: rgba(255, 255, 255, 0.575);
+    position: relative;
+    bottom: 0px;
+    left: 5px;
+  }
+
+.col-sm-7{
+    background-color: rgb(30, 29, 54);
+}
+
+.jumbotron {
+    background-color: darkgrey;
+}
+.head, .label {
+    color: beige;
+}
+
+input {
+    border: 2px solid #000;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  input:invalid {
+    border-color: red;
+  }
+  
+  input:valid {
+    border-color: green;
+  }
